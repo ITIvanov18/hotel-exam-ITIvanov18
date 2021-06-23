@@ -31,8 +31,31 @@ struct ROOM_PRICING
             return tmp;
         }
 
-        string rentRoom (string )
+        string rentRoom(string clientName, string roomType, int numberOfNights)
+        {
+            if (roomType == "signle" && doubleRooms - 1 >= 0)
+            {
+                return "No single rooms available! Available double rooms: " + (doubleRooms)
+            }
+            else if (roomType == "double" && doubleRooms - 1 >= 0)
+            {
+                return false;
+            }
+            else if (roomType == "maisonette" && maisonette - 1 >= 0)
+            {
 
+            }
+        }
+
+
+    private:
+        string name;
+        int doubleRooms, singleRooms, maisonette;
+        int capacity;
+        bool checkForRooms(string roomType)
+        {
+
+        }
 
     };
 
