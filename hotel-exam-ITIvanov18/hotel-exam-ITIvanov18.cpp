@@ -29,7 +29,7 @@ public:
 		this->name = name;
 		this->capacity = capacity;
 		this->singleRooms = capacity * 0.5;
-		this->doubleRooms = capacity * 0.5;
+		this->doubleRooms = capacity * 0.4;
 		this->maisonettes = capacity * 0.1;
 	}
 
@@ -79,6 +79,9 @@ void checkOut(int bookingNumber)
 
 int main()
 {
+	Hotel* hotel = new Hotel("SunnyHotel", 10);
+	hotel->rentARoom("Peter", "single", 4);
+	hotel->report();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
