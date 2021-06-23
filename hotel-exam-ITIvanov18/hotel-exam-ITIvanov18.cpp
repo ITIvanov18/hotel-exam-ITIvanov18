@@ -2,68 +2,61 @@
 //
 
 #include <iostream>
-#include <vector>​
-#include <string>​​
+#include <string>
+#include <vector>
 using namespace std;
 
-​
-struct ROOM_PRICING​
-
+struct ROOM_PRICING
 {
-	float single = 60; ​
-		float doubleRoom = 100; ​
-		float maisonette = 155; ​
+	float single = 60;
+	float double_ = 100;
+	float maisonette = 155;
 };
-​
 
-struct BOOKING​
-
+struct BOOKING
 {
-	string clientName; ​
-	string roomType; ​
-	int nights; ​
-	int rentNumber; ​
+	string clientName;
+	string roomType;
+	int nights;
+	int rentNumber;
 };
-	​
 
-	class Hotel​
-		{
-	public:​
-	Hotel(string name, int capacity)​
+class Hotel
+{
+public:
+	Hotel(string name, int capacity)
 	{
-		this->name = name; ​
-		this->capacity = capacity; ​
-		this->singleRooms = capacity * 0.5; ​
-		this->doubleRooms = capacity * 0.4; ​
-		his->maisonettes = capacity * 0.1; ​
-	}​
+		this->name = name;
+		this->capacity = capacity;
+		this->singleRooms = capacity * 0.5;
+		this->doubleRooms = capacity * 0.5;
+		this->maisonettes = capacity * 0.1;
+	}
+
+	ROOM_PRICING getRoomPricing()
+	{
+		ROOM_PRICING rp;
+		return rp;
+	}
 
 
-	ROOM_PRICING getRoomPricing()​
 
-		{
-			ROOM_PRICING room; ​
-				return room; ​
-		}​
-			
+private:
+	string name;
+	int capacity;
+	int singleRooms;
+	int doubleRooms;
+	int maisonettes;
+	int currentBookingNumber = 1;
+	vector<BOOKING> bookings;
+};
 
-		private:​
 
-								int singleRooms; ​
+void checkOut(int bookingNumber)
 
-								int doubleRooms; ​
-
-								int maisonettes; ​
-
-								string name; ​
-
-								int capacity; ​
-
-								vector<BOOKING> bookings; ​
-
-								int currentBookingNumber = 1; ​
-
-		};
+int main()
+{
+}
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
