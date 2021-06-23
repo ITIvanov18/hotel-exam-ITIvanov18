@@ -2,11 +2,40 @@
 //
 
 #include <iostream>
+#include <vector>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
-}
+struct ROOM_PRICING
+    {
+    int single = 60;
+    int doubleRoom = 100;
+    int maisonette = 155;
+    };
+
+    class Hotel
+    {
+    public:
+        Hotel(string newName, int newCapacity)
+        {
+            name = newName;
+            capacity = newCapacity;
+            doubleRooms = capacity * 0.50;
+            singleRooms = capacity * 0.40;
+            maisonette = capacity * 0.10;
+
+        }
+
+        ROOM_PRICING getRoomPricing()
+        {
+            ROOM_PRICING tmp;
+            return tmp;
+        }
+
+        string rentRoom (string )
+
+
+    };
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
