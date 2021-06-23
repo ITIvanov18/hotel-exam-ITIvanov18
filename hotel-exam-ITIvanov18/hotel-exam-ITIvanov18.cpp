@@ -1,64 +1,69 @@
-// hotel-exam-ITIvanov18.cpp : This file contains the 'main' function. Program execution begins and ends there.
+﻿// hotel-exam-ITIvanov18.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-#include <vector>
+#include <vector>​
+#include <string>​​
 using namespace std;
 
-struct ROOM_PRICING
-    {
-    int single = 60;
-    int doubleRoom = 100;
-    int maisonette = 155;
-    };
+​
+struct ROOM_PRICING​
 
-    class Hotel
-    {
-    public:
-        Hotel(string newName, int newCapacity)
-        {
-            name = newName;
-            capacity = newCapacity;
-            doubleRooms = capacity * 0.50;
-            singleRooms = capacity * 0.40;
-            maisonette = capacity * 0.10;
+{
+	float single = 60; ​
+		float doubleRoom = 100; ​
+		float maisonette = 155; ​
+};
+​
 
-        }
+struct BOOKING​
 
-        ROOM_PRICING getRoomPricing()
-        {
-            ROOM_PRICING tmp;
-            return tmp;
-        }
+{
+	string clientName; ​
+	string roomType; ​
+	int nights; ​
+	int rentNumber; ​
+};
+	​
 
-        string rentRoom(string clientName, string roomType, int numberOfNights)
-        {
-            if (roomType == "signle" && doubleRooms - 1 >= 0)
-            {
-                return "No single rooms available! Available double rooms: " + (doubleRooms)
-            }
-            else if (roomType == "double" && doubleRooms - 1 >= 0)
-            {
-                return false;
-            }
-            else if (roomType == "maisonette" && maisonette - 1 >= 0)
-            {
-
-            }
-        }
+	class Hotel​
+		{
+	public:​
+	Hotel(string name, int capacity)​
+	{
+		this->name = name; ​
+		this->capacity = capacity; ​
+		this->singleRooms = capacity * 0.5; ​
+		this->doubleRooms = capacity * 0.4; ​
+		his->maisonettes = capacity * 0.1; ​
+	}​
 
 
-    private:
-        string name;
-        int doubleRooms, singleRooms, maisonette;
-        int capacity;
-        bool checkForRooms(string roomType)
-        {
+	ROOM_PRICING getRoomPricing()​
 
-        }
+		{
+			ROOM_PRICING room; ​
+				return room; ​
+		}​
+			
 
-    };
+		private:​
 
+								int singleRooms; ​
+
+								int doubleRooms; ​
+
+								int maisonettes; ​
+
+								string name; ​
+
+								int capacity; ​
+
+								vector<BOOKING> bookings; ​
+
+								int currentBookingNumber = 1; ​
+
+		};
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
