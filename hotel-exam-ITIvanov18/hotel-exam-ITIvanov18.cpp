@@ -39,7 +39,30 @@ public:
 		return rp;
 	}
 
+	string rentARoom(string clientName, string roomType, int numberOfNights)
+	{
+		bookings.push_back({
+		clientName,
+		roomType,
+		numberOfNights,
+		currentBookingNumber++
+			});
 
+		if (roomType == "single")
+		{
+			singleRooms--;
+		}
+		if (roomType == "double")
+		{
+			doubleRooms--;
+		}
+		else
+		{
+			maisonettes--;
+		}
+
+		return "";
+	}
 
 private:
 	string name;
